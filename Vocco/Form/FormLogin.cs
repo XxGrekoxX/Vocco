@@ -54,12 +54,12 @@ namespace Vocco
             if (!ValidateInputs(out string user, out string password, out string selectedRole))
                 return;
 
-            if (!usuarioManager.VerificarUsuario(user, password))
+            if ((usuarioManager.VerificarUsuario(user, password)))
             {
                 MessageBox.Show("Usuario o contraseña incorrectos.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-
+            
             SwitchToRoleForm(selectedRole);
         }
 

@@ -30,7 +30,10 @@ namespace Vocco
                 };
                 usuarios.Add(usuario);
             }
-
+            if (usuarios == null) 
+            {
+                return null;
+            }
             return usuarios;
         }
         public void AgregarUsuario(Usuario nuevoUsuario)
